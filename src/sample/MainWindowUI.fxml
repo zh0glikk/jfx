@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<Group fx:id="root" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane prefHeight="300.0" prefWidth="600.0">
+         <children>
+            <HBox prefHeight="300.0" prefWidth="600.0" spacing="5.0">
+               <children>
+                  <VBox prefHeight="300.0" prefWidth="327.0" spacing="10.0">
+                     <children>
+                        <HBox prefHeight="32.0" prefWidth="232.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Температура:" wrappingWidth="88.22900390625" />
+                              <TextField fx:id="tempAmountInput" prefHeight="11.0" prefWidth="130.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets left="5.0" right="5.0" top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Задано в градусах:" wrappingWidth="88.22900390625">
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                        </Text>
+                        <HBox prefHeight="24.0" prefWidth="232.0">
+                           <children>
+                              <RadioButton fx:id="radioBtnCelc1" mnemonicParsing="false" text="Цельсія">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="toggleFrom" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="radioBtnKelv1" mnemonicParsing="false" text="Кельвіна" toggleGroup="$toggleFrom" />
+                              <RadioButton fx:id="radioBtnFar1" mnemonicParsing="false" text="Фаренгейта" toggleGroup="$toggleFrom" />
+                           </children>
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Перевести до градусів:" wrappingWidth="88.22900390625">
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                        </Text>
+                        <HBox prefHeight="24.0" prefWidth="232.0">
+                           <children>
+                              <RadioButton fx:id="radioBtnCelc2" mnemonicParsing="false" text="Цельсія">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="toggleTo" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton fx:id="radioBtnKelv2" mnemonicParsing="false" text="Кельвіна" toggleGroup="$toggleTo" />
+                              <RadioButton fx:id="radioBtnFar2" mnemonicParsing="false" text="Фаренгейта" toggleGroup="$toggleTo" />
+                           </children>
+                        </HBox>
+                        <Text fx:id="formulaText" strokeType="OUTSIDE" strokeWidth="0.0" text="Формула:" wrappingWidth="273.22900390625">
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                        </Text>
+                        <Button fx:id="countBtn" mnemonicParsing="false" onAction="#count" prefHeight="27.0" prefWidth="327.0" text="Обчислити">
+                           <VBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Text fx:id="tempAmountOutput" strokeType="OUTSIDE" strokeWidth="0.0" text="Значення:" wrappingWidth="269.22900390625">
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="300.0" prefWidth="262.0" spacing="10.0">
+                     <children>
+                        <TextFlow fx:id="infoText" prefHeight="149.0" prefWidth="262.0">
+                           <VBox.margin>
+                              <Insets left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </TextFlow>
+                        <HBox alignment="CENTER" prefHeight="132.0" prefWidth="250.0">
+                           <children>
+                              <Button fx:id="aboutBtn" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#about" prefHeight="27.0" prefWidth="70.0" text="About">
+                                 <HBox.margin>
+                                    <Insets right="25.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="exitBtn" mnemonicParsing="false" onAction="#exit" prefHeight="27.0" prefWidth="70.0" text="Exit">
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</Group>
